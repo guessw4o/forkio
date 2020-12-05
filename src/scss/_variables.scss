@@ -1,4 +1,20 @@
+.container {
+    min-width: 320px;
+    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 481px) and (max-width: 992px) {
+        max-width: 768px;
+    }
+    
+    @media (min-width: 993px) {
+        max-width: 1200px;
+    }
+}
+
 $montserrat: 'Montserrat', 'Arial', sans-serif;
 $lato: 'Lato', 'Arial', sans-serif;
 
-$color: #000000;
+$dark-purple: #635C73;
+$black: #323232;
