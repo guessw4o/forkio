@@ -73,7 +73,9 @@
         width: 40%;
         margin-bottom: 20px;
 
-        @media (min-width: 768px) {
+        @media (min-width: 481px) {
+            width: auto;
+            padding-left: 5px;
             margin-bottom: 0;
         }
     }
