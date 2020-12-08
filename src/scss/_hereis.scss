@@ -102,7 +102,6 @@
 
     &__img-320 {
         float: right;
-        margin-right: -10px;
 
         @media (min-width: 481px) {
             display: none;
@@ -116,7 +115,6 @@
             padding-top: 76px;
             display: block;
             float: right;
-            margin-right: -10px;
         }
 
         @media (min-width: 993px) {

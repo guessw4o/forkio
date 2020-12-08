@@ -26,3 +26,11 @@
     }
 }
 
+@mixin duration-line {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background: #8d81ac;
+}
