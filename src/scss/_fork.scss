@@ -17,6 +17,9 @@
             grid-template-columns: 257px 257px 299px 256px;
             justify-items: center;
             align-items: center;
+        }
+
+        @media (min-width: 1150px) {
             gap: 0 15px;
         }
     }
@@ -168,7 +171,7 @@
         padding: 73px 0 37px;
 
         &--margin {
-            margin-bottom: 33px;
+            margin-bottom: 36px;
         }
     }
 
