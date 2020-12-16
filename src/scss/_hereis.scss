@@ -1,125 +1,127 @@
 .hereis {
-    text-align: center;
-    padding-bottom: 6px;
+  text-align: center;
+  padding-bottom: 6px;
+
+  @media (min-width: 481px) and (max-width: 992px) {
+    padding-bottom: 1px;
+  }
+
+  @media (min-width: 993px) {
+    padding-bottom: 33px;
+    background-color: #f4f4f4;
+  }
+
+  &--h2 {
+    @include montserrat-bold;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: $purple;
 
     @media (min-width: 481px) and (max-width: 992px) {
-        padding-bottom: 1px;
+      font-size: 42px;
+      line-height: 44px;
     }
 
     @media (min-width: 993px) {
-        padding-bottom: 33px;
-        background-color: #F4F4F4;
+      font-size: 48px;
+      line-height: 50px;
+    }
+  }
+
+  &__top-title {
+    @media (min-width: 993px) {
+      display: none;
+    }
+  }
+
+  &__right-title {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: 993px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 98px;
+    }
+  }
+
+  &__info {
+    @media (max-width: 480px) {
+      padding-top: 36px;
+    }
+  }
+
+  &__item {
+    @media (min-width: 481px) {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      justify-items: center;
+      padding: 50px 40px 0 30px;
+      text-align: left;
     }
 
-    &--h2 {
-        @include montserrat-bold;
-        font-size: 32px;
-        line-height: 38px;
-        text-transform: uppercase;
-        color: $purple;
+    @media (min-width: 993px) {
+      padding: 0 50px 35px 0;
+      text-align: left;
+    }
+  }
 
-        @media (min-width: 481px) and (max-width: 992px) {
-            font-size: 42px;
-            line-height: 44px;
-        }
+  &__text-container {
+    @media (min-width: 481px) {
+      padding-left: 23px;
+    }
+  }
 
-        @media (min-width: 993px) {
-            font-size: 48px;
-            line-height: 50px;
-        }
+  &__title {
+    @include montserrat-reg;
+    padding-top: 25px;
+    font-size: 16px;
+    color: $black;
+
+    @media (min-width: 481px) {
+      padding-top: 0;
+      line-height: 21px;
+    }
+  }
+
+  &__text {
+    @include lato-reg;
+    font-size: 14px;
+    color: $grey;
+
+    @media (max-width: 480px) {
+      padding: 14px 16px 40px 16px;
     }
 
-    &__top-title {
-        @media (min-width: 993px) {
-            display: none;
-        }
+    @media (min-width: 481px) {
+      padding-top: 16px;
+    }
+  }
+
+  &__img-320 {
+    float: right;
+
+    @media (min-width: 481px) {
+      display: none;
+    }
+  }
+
+  &__img-768 {
+    display: none;
+
+    @media (min-width: 481px) and (max-width: 992px) {
+      padding-top: 76px;
+      display: block;
+      float: right;
     }
 
-    &__right-title {
-        @media (max-width: 992px) {
-            display: none;
-        }
+    @media (min-width: 993px) {
+      display: block;
+      padding-top: 18px;
     }
-
-    &__wrapper {
-        @media (min-width: 993px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding-top: 98px;
-        }
-    }
-
-    &__info {
-        @media (max-width: 480px) {
-            padding-top: 36px;
-        }
-    }
-
-    &__item {
-        @media (min-width: 481px) {
-            display: grid;
-            grid-template-columns: 110px 1fr;
-            justify-items: center;
-            padding: 50px 40px 0 30px;
-            text-align: left;
-        }
-
-        @media (min-width: 993px) {
-            padding:0 50px 35px 0;
-            text-align: left;
-        }
-    }
-    
-    &__text-container {
-        padding-left: 23px;
-    }
-
-    &__title {
-        @include montserrat-reg;
-        padding-top: 25px;
-        font-size: 16px;
-        color: $black;
-
-        @media (min-width: 481px) {
-            padding-top: 0;
-            line-height: 21px;
-        }
-    }
-
-    &__text {
-        @include lato-reg;
-        font-size: 14px;
-        color: $grey;
-        
-        @media (max-width: 480px) {
-            padding: 14px 16px 40px 16px;
-        }
-
-        @media (min-width: 481px) {
-            padding-top: 16px;
-        }
-    }
-
-    &__img-320 {
-        float: right;
-
-        @media (min-width: 481px) {
-            display: none;
-        }
-    }
-
-    &__img-768 {
-        display: none;
-
-        @media (min-width: 481px) and (max-width: 992px) {
-            padding-top: 76px;
-            display: block;
-            float: right;
-        }
-
-        @media (min-width: 993px) {
-            display: block;
-            padding-top: 18px;
-        }
-    }
+  }
 }

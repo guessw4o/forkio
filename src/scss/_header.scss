@@ -1,1 +1,433 @@
+.header {
+  position: relative;
+  background-color: $header-grey;
+  margin-bottom: 79px;
+  @media (min-width: 481px) and (max-width: 992px) {
+    margin-bottom: 93px;
+  }
+  @media (min-width: 993px) {
+    margin-bottom: 66px;
+    background-color: $black;
+  }
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 15px 24px 16px;
+    @media (min-width: 481px) and (max-width: 992px) {
+      padding: 22px 20px 54px;
+    }
+    @media (min-width: 993px) {
+      padding: 0 90px;
+    }
 
+    &-logo {
+      @media (min-width: 481px) and (max-width: 992px) {
+        display: flex;
+        align-items: center;
+      }
+      @media (min-width: 993px) {
+        display: flex;
+        align-items: center;
+        margin-top: 29px;
+        &:hover > span {
+          color: $white;
+        }
+        &:hover > svg {
+          fill-opacity: 0;
+          background-image: url(../../dist/img/logo-hover.svg);
+        }
+      }
+    }
+
+    &-forkio {
+      display: none;
+      @media (min-width: 481px) {
+        display: block;
+        color: $purple;
+        @include lato-bold;
+        font-size: 24px;
+        line-height: 16px;
+        margin-left: 17px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__buy-now {
+    @include montserrat-bold;
+    width: 119px;
+    height: 37px;
+    font-size: 15px;
+    line-height: 15px;
+    background: $purple;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 481px) and (max-width: 992px) {
+      width: 145px;
+      height: 38px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    @media (min-width: 993px) {
+      width: 145px;
+      height: 38px;
+      font-size: 16px;
+      line-height: 17px;
+      margin-top: 31px;
+      &:hover {
+        background-color: $white;
+        color: $purple;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    width: 26px;
+    height: 21px;
+    border: none;
+    top: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    @media (min-width: 481px) {
+      display: none;
+    }
+
+    &-line {
+      position: absolute;
+      width: 26px;
+      height: 3px;
+      left: 0px;
+      top: 6px;
+      background-color: $white;
+      border-radius: 5px;
+
+      &::before {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        content: "";
+        height: 3px;
+        width: 26px;
+        background-color: $white;
+        border-radius: 5px;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: 6px;
+        left: 11px;
+        content: "";
+        height: 3px;
+        width: 15px;
+        background-color: $white;
+        border-radius: 5px;
+      }
+      &.active {
+        background: none;
+
+        &::before {
+          transform: rotate(-45deg);
+          top: 0;
+          transition: all 0.3s ease 0s;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          bottom: 0;
+          width: 26px;
+          left: 1px;
+          transition: all 0.3s ease 0s;
+        }
+      }
+    }
+  }
+  .navigator {
+    position: relative;
+    left: calc((100% - 292px) / 2);
+    display: none;
+
+    @media (min-width: 481px) and (max-width: 992px) {
+      display: flex;
+      top: -71px;
+      left: 0;
+      justify-content: center;
+    }
+    @media (min-width: 993px) {
+      display: flex;
+      top: -63px;
+      left: 286px;
+    }
+    &.active {
+      display: block;
+      z-index: 1;
+
+      @media (min-width: 481px) and (max-width: 992px) {
+        display: none;
+      }
+    }
+    &__menu {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 292px;
+      background-color: $black-grey;
+      @media (min-width: 481px) and (max-width: 767px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        z-index: 1;
+        background-color: transparent;
+      }
+      @media (min-width: 768px) and (max-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 75%;
+        z-index: 1;
+        background-color: transparent;
+      }
+      @media (min-width: 993px) and (max-width: 1100px) {
+        display: flex;
+        flex-direction: row;
+        width: 59%;
+        z-index: 1;
+        background-color: transparent;
+      }
+      @media (min-width: 1101px) and (max-width: 1199px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        z-index: 1;
+        background-color: transparent;
+      }
+      @media (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        z-index: 1;
+        background-color: transparent;
+      }
+      &-item {
+        position: relative;
+        @include montserrat-reg;
+        font-size: 26px;
+        line-height: 26px;
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        padding-left: 35px;
+        border-bottom: 2px solid $black-decor-line;
+        @media (min-width: 481px) and (max-width: 767px) {
+          border: none;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        @media (min-width: 768px) and (max-width: 992px) {
+          border: none;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        @media (min-width: 993px) and (max-width: 1100px) {
+          border: none;
+          padding-left: 10px;
+          padding-right: 10px;
+          height: 0;
+        }
+        @media (min-width: 1101px) and (max-width: 1199px) {
+          border: none;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        @media (min-width: 1200px) {
+          border: none;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+      &-item:last-child::after {
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        content: "";
+        height: 14px;
+        width: 292px;
+        background-color: $black-grey;
+        @media (min-width: 481px) {
+          display: none;
+        }
+      }
+    }
+    &__link {
+      @media (min-width: 481px) and (max-width: 992px) {
+        @include montserrat-bold;
+        font-size: 16px;
+        line-height: 18px;
+        color: $purple;
+      }
+      @media (min-width: 993px) {
+        @include montserrat-bold;
+        color: $purple;
+        font-size: 16px;
+        line-height: 15px;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    &__link:active {
+      color: $purple;
+      @media (min-width: 481px) {
+      }
+    }
+    &__link:focus {
+      color: $purple;
+      @media (min-width: 481px) {
+      }
+    }
+    &__link:active::after {
+      position: absolute;
+      left: 0;
+      top: 19px;
+      content: "";
+      width: 8px;
+      height: 53px;
+      background-color: $purple;
+      @media (min-width: 481px) {
+        display: none;
+      }
+    }
+    &__link:focus::after {
+      position: absolute;
+      left: 0;
+      top: 19px;
+      content: "";
+      width: 8px;
+      height: 53px;
+      background-color: $purple;
+      @media (min-width: 993px) {
+        display: none;
+      }
+    }
+  }
+  &__unlimited {
+    @include montserrat-reg;
+    position: absolute;
+    bottom: -56px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #848e97;
+    left: calc((100% - 205px) / 2);
+    @media (min-width: 481px) and (max-width: 992px) {
+      font-size: 14px;
+      line-height: 16px;
+      left: calc((100% - 205px) / 2);
+      bottom: -67px;
+    }
+    @media (min-width: 993px) {
+      font-size: 14px;
+      line-height: 15px;
+      left: calc((100% - 205px) / 2);
+      bottom: -67px;
+    }
+  }
+}
+.fork-app {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 615px;
+  text-align: center;
+  background-image: url(../../dist/img/-header-background.jpg);
+  background-position: center center;
+  background-size: cover;
+  @media (min-width: 481px) and (max-width: 992px) {
+    min-height: 618px;
+  }
+  @media (min-width: 993px) {
+    min-height: 708px;
+  }
+  &__h1 {
+    @include montserrat-bold;
+    font-size: 48px;
+    line-height: 48px;
+    color: $white;
+    padding: 50px 0px 19px;
+    @media (min-width: 481px) and (max-width: 992px) {
+      font-size: 72px;
+      line-height: 72px;
+      padding: 68.91px 0px 19px;
+    }
+    @media (min-width: 993px) {
+      font-size: 82px;
+      line-height: 82px;
+      padding: 120px 0px 19px;
+    }
+  }
+  &__text {
+    @include montserrat-reg;
+    font-size: 18px;
+    line-height: 24px;
+    color: $purple;
+    text-align: center;
+    padding: 0 11px 14px;
+    @media (min-width: 481px) and (max-width: 992px) {
+      @include lato-reg;
+      font-size: 24px;
+      line-height: 24px;
+      padding-bottom: 19px;
+    }
+    @media (min-width: 993px) {
+      font-size: 30px;
+      line-height: 30px;
+      padding-bottom: 19px;
+    }
+  }
+  &__text2 {
+    @include montserrat-reg;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $grey;
+    @media (min-width: 993px) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  &__download {
+    position: absolute;
+    bottom: -19px;
+    left: calc((100% - 290px) / 2);
+    @include montserrat-bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: $white;
+    background-color: $purple;
+    padding: 13px 29px;
+    border-radius: 40px;
+    @media (min-width: 481px) and (max-width: 992px) {
+      bottom: -32px;
+      left: calc((100% - 383px) / 2);
+      font-size: 21px;
+      line-height: 23px;
+      padding: 23px 61px;
+    }
+    @media (min-width: 993px) {
+      font-size: 21px;
+      line-height: 22px;
+      padding: 23px 61px;
+      bottom: -32px;
+      left: calc((100% - 383px) / 2);
+      &:hover {
+        background-color: $white;
+        color: $purple;
+      }
+    }
+  }
+}

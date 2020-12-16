@@ -1,23 +1,32 @@
 .container {
-    min-width: 320px;
-    padding: 0 10px;
-    margin-left: auto;
-    margin-right: auto;
+  min-width: 320px;
+  padding: 0 10px;
+  // margin-left: auto;
+  // margin-right: auto;
+  box-sizing: border-box;
 
-    @media (min-width: 481px) and (max-width: 992px) {
-        max-width: 768px;
-    }
-    
-    @media (min-width: 993px) {
-        max-width: 1200px;
-    }
+  @media (min-width: 481px) and (max-width: 992px) {
+    width: 100%;
+  }
+
+  @media (min-width: 993px) {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
-$montserrat: 'Montserrat', 'Arial', sans-serif;
-$lato: 'Lato', 'Arial', sans-serif;
+$montserrat: "Montserrat", "Arial", sans-serif;
+$lato: "Lato", "Arial", sans-serif;
 
-$purple: #8D81AC;
-$dark-purple: #635C73;
+$purple: #8d81ac;
+$dark-purple: #635c73;
 $black: #323232;
-$grey: #848E97;
-$white: #FFFFFF;
+$grey: #848e97;
+$white: #ffffff;
+$black-grey: #333333;
+$black-decor-line: #484646;
+$header-grey: #27262a;
+$black: #000000;
+$light-purple: #a291a5;
+$black-purple: #645766;
