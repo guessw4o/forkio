@@ -1,28 +1,36 @@
-%montserrat-reg {
+@mixin montserrat-reg {
     font: {
       family: $montserrat;
       weight: 400;
     }
 }
 
-%montserrat-bold {
+@mixin montserrat-bold {
     font: {
       family: $montserrat;
       weight: bold;
     }
 }
 
-%lato-reg {
+@mixin lato-reg {
     font: {
       family: $lato;
       weight: 400;
     }
 }
 
-%lato-bold {
+@mixin lato-bold {
     font: {
       family: $lato;
       weight: bold;
     }
 }
 
+@mixin duration-line {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background: #8d81ac;
+}
