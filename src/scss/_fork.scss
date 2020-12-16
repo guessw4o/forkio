@@ -1,1 +1,189 @@
+.fork {
+    text-align: center;
+    background-color: #4b3a4d;
 
+    &__table {
+        display: grid;
+        justify-content: center;
+
+        @media (min-width: 481px) and (max-width: 992px) {
+            grid-template-columns: 257px 257px;
+            gap: 0 25px;
+            justify-items: end;
+            align-items: center;
+        }
+
+        @media (min-width: 993px) {
+            grid-template-columns: 257px 257px 299px 256px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        @media (min-width: 1150px) {
+            gap: 0 15px;
+        }
+    }
+
+    &__item {
+        background-color: #6e5b70;
+        display: flex;
+        flex-direction: column;
+        width: 257px;
+        
+        margin: 0 0 18px 20px;
+
+        @media (min-width: 481px) and (max-width: 992px) {
+            margin: 0 0 30px 0px;
+        }
+
+        @media (min-width: 993px) {
+            margin: 0;
+        }
+    }
+
+    &__super {
+        background-color: #463048;
+        opacity: 0.84;
+        display: flex;
+        flex-direction: column;
+        width: 299px;
+        height: 560px;
+        margin-bottom: 18px;
+
+        &-plan {
+            @include montserrat-reg;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: $white;
+            background-color: #3a283b;
+            padding: 43px 0 43px 0;
+        }
+
+        &-price {
+            @include montserrat-reg;
+            font-size: 60px;
+            line-height: 62px;
+            color: $white;
+            padding: 14px 0 16px 0;
+            font-size: 82px;
+            line-height: 84px;
+
+            &--bold {
+                @include montserrat-bold;
+            }
+        }
+
+        &-duration {
+            @include montserrat-reg;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: $white;
+            position: relative;
+    
+            &::after {
+                @include duration-line;
+                left: 120px;
+                bottom: -46px;
+              }     
+        }
+
+        &-licence {
+            @include montserrat-reg;
+            font-size: 16px;
+            line-height: 18px;
+            color: $white;
+            padding: 91px 0 83px;
+        }
+
+        &-purchase {
+            @include montserrat-reg;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding: 18.5px 48px 18.5px 48px;
+            margin: 0 0 47px 55px;
+            background-color: rgb(128, 115, 133);
+            border-radius: 25px;
+            width: 32%;
+        }
+    }   
+
+    &--h2 {
+        @include montserrat-bold;
+        font-size: 28px;
+        line-height: 42px;
+        color: $white;
+        padding-bottom: 32px;
+
+        @media (min-width: 481px) and (max-width: 992px) {
+            font-size: 42px;
+            line-height: 44px;
+        }
+
+        @media (min-width: 993px) {
+            font-size: 48px;
+            line-height: 50px;
+        }
+    }
+
+    &__plan {
+        @include montserrat-reg;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $white;
+        background-color: rgb(128, 115, 133);
+        padding: 36px 0 36px 0;
+    }
+
+    &__price {
+        @include montserrat-reg;
+        font-size: 60px;
+        line-height: 62px;
+        color: $white;
+        padding: 30px 0 20px 0;
+
+        &--bold {
+            @include montserrat-bold;
+        }
+    }
+
+    &__duration {
+        @include montserrat-reg;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $white;
+        position: relative;
+
+        &::after {
+            @include duration-line;
+            left: 100px;
+            bottom: -38px;
+          }      
+    }
+
+    &__licence {
+        @include montserrat-reg;
+        font-size: 16px;
+        line-height: 18px;
+        color: $white;
+        padding: 73px 0 37px;
+
+        &--margin {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__purchase {
+        @include montserrat-reg;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 15.5px 38px 14.5px 37px;
+        margin: 0 0 36px 55px;
+        background-color: rgb(128, 115, 133);
+        border-radius: 25px;
+        width: 30%;
+    }
+}
