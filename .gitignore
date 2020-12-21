@@ -1,8 +1,6 @@
 package-lock.json
 
-node_modules
-/*
-dist/*
+node_modules/*
 
 .vscode/*
 
