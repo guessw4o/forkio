@@ -48,12 +48,13 @@
       flex-direction: row;
       flex-wrap: wrap;
       align-items: baseline;
-      justify-content: space-between;
+      justify-content: center;
     }
     @media (min-width: 993px) {
       flex-direction: row;
       flex-wrap: wrap;
       align-items: baseline;
+      justify-content: center;
     }
 
     &-item {
@@ -70,24 +71,19 @@
       }
       @media (min-width: 481px) and (max-width: 992px) {
         width: 40%;
-        padding: 0 3px 56px;
+        padding: 0 25px 56px 20x;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-right: 15px;
-        margin-left: 15px;
       }
       @media (min-width: 993px) {
         width: 30%;
         padding-bottom: 116px;
+
+        padding: 0 3px 56px;
       }
     }
-    // &-buddha {
-    //   @media (min-width: 481px) and (max-width: 992px) {
-    //     width: 40%;
-    //     padding: 0px 0px 56px;
-    //   }
-    // }
+  
     &-text {
       @include lato-bold;
       font-size: 16px;

@@ -13,12 +13,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 34px 15px 24px 16px;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 34px 15px 24px 16px;
+    }
     @media (min-width: 481px) and (max-width: 992px) {
       padding: 22px 20px 54px;
     }
-    @media (min-width: 993px) {
-      padding: 0 90px;
+
+    @media (min-width: 1200px) {
+      padding: 0px;
+      margin-left: 80px;
     }
 
     &-logo {
@@ -72,6 +77,7 @@
       line-height: 16px;
     }
     @media (min-width: 993px) {
+      display: none;
       width: 145px;
       height: 38px;
       font-size: 16px;
@@ -80,6 +86,13 @@
       &:hover {
         background-color: $white;
         color: $purple;
+        border: $purple 1px solid;
+      }
+    }
+    &--link {
+      display: none;
+      @media (min-width: 993px) {
+        display: flex;
       }
     }
   }
@@ -91,6 +104,7 @@
     border: none;
     top: 4px;
     background-color: transparent;
+
     cursor: pointer;
     @media (min-width: 481px) {
       display: none;
@@ -131,16 +145,16 @@
 
         &::before {
           transform: rotate(-45deg);
-          top: 0;
-          transition: all 0.3s ease 0s;
+          top: 3px;
+          transition: all 0.4s ease 0s;
         }
 
         &::after {
           transform: rotate(45deg);
-          bottom: 0;
+          bottom: -3px;
           width: 26px;
           left: 1px;
-          transition: all 0.3s ease 0s;
+          transition: all 0.4s ease 0s;
         }
       }
     }
@@ -158,8 +172,8 @@
     }
     @media (min-width: 993px) {
       display: flex;
-      top: -63px;
-      left: 286px;
+      top: -97px;
+      // left: 286px;
     }
     &.active {
       display: block;
@@ -191,29 +205,19 @@
         z-index: 1;
         background-color: transparent;
       }
-      @media (min-width: 993px) and (max-width: 1100px) {
+      @media (min-width: 993px) {
         display: flex;
         flex-direction: row;
-        width: 59%;
+        width: 62%;
         z-index: 1;
         background-color: transparent;
-      }
-      @media (min-width: 1101px) and (max-width: 1199px) {
-        display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        width: 50%;
-        z-index: 1;
-        background-color: transparent;
+        align-items: baseline;
+        margin-top: 25px;
       }
       @media (min-width: 1200px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 50%;
-        z-index: 1;
-        background-color: transparent;
       }
+
       &-item {
         position: relative;
         @include montserrat-reg;
@@ -261,6 +265,11 @@
         background-color: $black-grey;
         @media (min-width: 481px) {
           display: none;
+        }
+      }
+      &-link {
+        @media (min-width: 1200px) {
+          margin-right: 80px;
         }
       }
     }
@@ -427,6 +436,7 @@
       &:hover {
         background-color: $white;
         color: $purple;
+        border: $purple 2px solid;
       }
     }
   }
