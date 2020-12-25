@@ -6,11 +6,6 @@
     padding-bottom: 20px;
   }
 
-  @media (min-width: 993px) {
-    padding-bottom: 33px;
-    background-color: #f4f4f4;
-  }
-
   &--h2 {
     @include montserrat-bold;
     font-size: 32px;
@@ -59,7 +54,7 @@
     }
 
     @media (min-width: 993px) {
-      padding: 0 50px 35px 0;
+      padding: 0 50px 55px 0;
       text-align: left;
     }
   }
